@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../views";
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-montserrat:  'Montserrat' ui-sans-serif, system-ui, sans-serif;
+}
+
+@utility page-container {
+    @apply mx-auto w-full max-w-[calc(1140px+2rem)] px-4 xl:px-0;
+}
+
+@utility nav-link {
+    @apply py-0.5 px-3 relative inline-block text-sky-300 font-semibold after:absolute after:left-1/2 after:-bottom-1 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-sky-300 after:transition-all after:duration-300 hover:after:w-full;
+}
+
+@utility nav-link-mobile {
+    @apply block py-2 px-4 text-sm text-sky-300 hover:text-sky-500 transition-all duration-300
+}
+
+@utility hero-button-buy {
+    @apply bg-cyan-500 text-white px-5 py-2 rounded-md hover:bg-cyan-600 transition-all duration-300
+}
+
+@utility hero-button-consultation {
+    @apply bg-gray-700 text-white px-5 py-2 rounded-md hover:bg-gray-800 transition-all duration-300
+}
+
+@utility card-ingredient {
+    @apply flex flex-col rounded-3xl border-4 border-orange-500 overflow-hidden;
+}
+
+@utility card-ingredient-header {
+    @apply bg-orange-500 text-white text-center font-semibold py-3;
+} 
+
+@utility card-ingredient-body {
+    @apply bg-white flex-1 flex flex-col justify-center items-center text-center gap-3 px-5 py-8;
+}
+
+@utility accordion-btn {
+    @apply w-full flex items-center justify-between bg-cyan-500 text-white text-sm font-medium px-4 py-3 cursor-pointer transition-colors duration-200 hover:bg-cyan-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300;
+}
+
+@utility accordion-panel {
+    @apply bg-white text-gray-700 text-sm leading-relaxed;
+    & > div {
+        @apply p-4;
+    }
+}
